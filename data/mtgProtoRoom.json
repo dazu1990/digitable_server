@@ -1,0 +1,27 @@
+{
+    "roomNum" : 0,
+    "roomData": {
+        "style": "mtg",
+        "subtheme": "edh",
+        "kingdoms": false,
+        "dice":{
+            "dicevalues": [
+                {
+                    "sides": 6,
+                    "value": 4
+                },
+                {
+                    "sides": 6,
+                    "value": 2
+                }
+            ],
+            "rolling": false
+        },
+        "coin": {
+            "heads": true
+        },
+        "startinglife": 20,
+        "player_data": [
+        ]
+    }
+}
