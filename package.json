@@ -1,13 +1,14 @@
 {
-  "name": "chatter",
+  "name": "Digitable",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": ">=12.0.0",
   "scripts": {
     "start": "nodemon ./index.js --exec babel-node -e js",
     "test": "DEBUG=* nodemon ./index.js --exec babel-node -e js"
   },
-  "author": "Emmanuel Henri",
+  "author": "Adrian Davila-Zuniga",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
