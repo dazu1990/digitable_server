@@ -5,6 +5,8 @@
 
 # DATA
 /data/mtg/*
+!/data/mtg/.gitkeep 
+
 
 # testing
 # /coverage
