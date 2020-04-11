@@ -41,6 +41,13 @@ let joinRoom = (client,roomNum)=>{
 
     let gameData = JSON.parse(fs.readFileSync(`data${roomNum}.json`));
 
+    // try {
+    //     fileContents = JSON.parse(fs.readFileSync(`data${roomNum}.json`));
+    //   } catch (err) {
+    //     // Here you get the error when the file was not found,
+    //     // but you also get any other error
+    //   }
+
     client.nickname = `Room_${roomNum}_${gameData.roomData.player_data.length}`;
 
     //push a new player to player_data
@@ -89,11 +96,22 @@ let createNewRoom = (roomNum)=>{
     let prototypeJSON = JSON.parse(fs.readFileSync('data/mtgProtoRoom.json'));
 
     prototypeJSON.roomNum = roomNum;
+    let writeroom = ()=>{
+        fs.writeFileSync(`data${roomNum}.json`, JSON.stringify(prototypeJSON), function(err) {
+            if(err) throw err;
+            console.log(`Created data${roomNum}.json`);
+        });
+    }
 
-    fs.writeFileSync(`data${roomNum}.json`, JSON.stringify(prototypeJSON), function(err) {
-        if(err) throw err;
-        console.log(`Created data${roomNum}.json`);
-    });
+    if (!fs.existsSync('data/mtg')){
+        fs.mkdirSync('data/mtg');
+        writeroom();
+    }else{
+        writeroom();
+        // throw err;
+    }
+    // writeroom();
+    
 }
 
 let sendConsole = (packet)=>{
