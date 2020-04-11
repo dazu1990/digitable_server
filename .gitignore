@@ -5,6 +5,8 @@
 
 # DATA
 /data/mtg/*
+# keep folder
+
 !/data/mtg/.gitkeep 
 
 
