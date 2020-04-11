@@ -1,5 +1,5 @@
 {
-  "name": "Digitable",
+  "name": "digitable_server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,6 @@
     "test": "DEBUG=* nodemon ./index.js --exec babel-node -e js"
   },
   "author": "Adrian Davila-Zuniga",
-  "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
     "merge-json": "0.1.0-b.3",
